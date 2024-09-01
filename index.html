@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>popup</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <h1>MADHAVAN NOTES</h1> 
+        </div>
+    </header>
+    <main>
+        <section>
+            <div class="container">
+                <div class="book-container">
+                    <h2>Rich Dad Poor Dad</h2>
+                    <h5>Robert</h5>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis repellendus laudantium quaerat deleniti, sequi qui odio? Exercitationem corrupti, quos sit porro atque, earum nam neque rem deserunt perferendis eaque laborum!</p>
+                    <button>delete</button>
+                </div>
+            </div>
+            <button class="add-button" onclick="showpopup()">+</button>
+        </section>
+        <section>
+            <div class="popup-box" id="popupbox">
+                <h2>add book</h2>
+                <form>
+                    <div>
+                        <label for="book-title-input">book title</label>
+                        <input type="text" placeholder="book title" id="book-title-input">
+                    </div>
+                    <div>
+                        <label for="book-author-input">book author</label>
+                        <input type="text" placeholder="book author" id="book-author-input">
+                    </div>
+                    <div>
+                        <textarea placeholder="short description" id="book-description-input"></textarea>
+                    </div>
+                    <button class="cancel-popup" onclick="cancelpopup()">cancel</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function showpopup() {
+            document.getElementById("popupbox").style.display = "block"
+        }
+
+        function cancelpopup() {
+            document.getElementById("popupbox").style.display = "none"
+        }
+    </script>
+</body>
+</html>
